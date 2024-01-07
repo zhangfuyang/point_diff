@@ -1,0 +1,6 @@
+data_bank
+.vscode
+__pycache__
+*.png
+datasets
+log
