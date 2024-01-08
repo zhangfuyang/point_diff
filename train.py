@@ -34,9 +34,9 @@ checkpoint_callback = pl.callbacks.ModelCheckpoint(
 
 trainer = pl.Trainer(
     default_root_dir=train_config.output_dir,
-    accelerator='gpu', strategy='ddp', devices=2, num_nodes=1,
+    accelerator='gpu', strategy='ddp', devices=8, num_nodes=1,
     precision=16, max_epochs=train_config.num_epochs,
-    val_check_interval=1., check_val_every_n_epoch=3,
+    val_check_interval=1., check_val_every_n_epoch=8,
     num_sanity_val_steps=1, limit_val_batches=1,
     accumulate_grad_batches=1, gradient_clip_val=1,
     detect_anomaly=False,

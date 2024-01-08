@@ -4,7 +4,6 @@ import glob
 import numpy as np
 import os
 import cv2
-from datasets import load_dataset
 from process_data import create_house_from_name
 from tqdm import tqdm
 
